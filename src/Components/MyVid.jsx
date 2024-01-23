@@ -25,7 +25,7 @@ const MyVid = () => {
           },
         }
       );
-      console.log(res.data);
+      // console.log(res.data);
       setMyvid(res.data);
       setCurrentVideo(res.data[0]);
     };
@@ -86,7 +86,7 @@ const MyVid = () => {
     }
   };
 
-  console.log(videos);
+  // console.log(videos);
 
   return (
     <>
@@ -97,8 +97,8 @@ const MyVid = () => {
             <div className="my-vid">
               <div className="left">
                 <div className="my-videos">
-                  {myvid.map((video) => (
-                    <div
+                  {myvid.map((video,id) => (
+                    <div key={id}
                       className="my-video"
                       onClick={() => setCurrentVideo(video)}
                     >
@@ -171,7 +171,7 @@ const MyVid = () => {
         </>
       ) : (
         <>
-          <h2 style={{ color: "black", margin: "auto" }}>
+          <h2 className="msg" style={{ color: "black", margin: "auto" }}>
             Please Upload Some Video
           </h2>
         </>

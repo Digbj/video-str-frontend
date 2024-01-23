@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Smallvideo from "./Smallvideo";
 const Vcarousel = () => {
   const [videos, setVideos] = useState([]);
-  // const [lessVideos, setLessVideos] = useState([]);
+  
   const { currentUser } = useSelector((state) => state.user);
 
   useEffect(() => {
@@ -19,12 +19,12 @@ const Vcarousel = () => {
     GetData();
   }, [currentUser]);
 
-  console.log(videos);
+  // console.log(videos);
 
   return (
     <div className="view-less">
-      {videos.map((video) => (
-        <Link to="/play-video" state={{ movieData: video }}>
+      {videos.map((video , id) => (
+        <Link key={id} to="/play-video" state={{ movieData: video }}>
           <Smallvideo video={video} />
         </Link>
       ))}

@@ -17,6 +17,7 @@ const SuggestionVideo = () => {
 
   return (
     <div className="suggestion-videos">
+      <p className="sug">Watch This</p>
       {videos.map((video, index) => (
         <Link to="/play-video" state={{ movieData: video }}>
           <Smallvideo video={video} key={index} />

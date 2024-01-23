@@ -1,50 +1,14 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 /*------------SigninSignup css*/
 html,
 body {
   margin: 0px;
   height: 100%;
+  width: 100%;
 }
 .container {
   display: flex;
+  flex-direction: row;
   height: 100vh;
 }
 
@@ -103,7 +67,7 @@ body {
 }
 .div2 {
   border: 1px solid black;
-  height: 100%;
+  height: 100vh;
   width: 608px;
   background: #0f121ff5 0% 0% no-repeat padding-box;
   display: flex;
@@ -443,10 +407,11 @@ background-image: url("https://www.pngkit.com/png/full/273-2739733_white-drop-do
 }
 
 .navigation-bar {
+  width:100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   background-color: #f8f8f8;
   /* width: 1440px; */
   height: 60px;
@@ -457,12 +422,11 @@ background-image: url("https://www.pngkit.com/png/full/273-2739733_white-drop-do
 
 .search-bar {
   flex: 1;
-  margin: 0 20px;
   text-align: center;
 }
 
 .search-bar > input {
-  width: 517px;
+  width: 80%;
   height: 25px;
   color: #ffffff;
   background: #191919 0% 0% no-repeat padding-box;
@@ -487,7 +451,7 @@ span {
 
 /*----------------------HomePage-----------------------*/
 .Image {
-  width: 100vw;
+  width:100%;
   height: auto;
   position: relative;
 }
@@ -662,8 +626,9 @@ span {
   justify-content: space-around;
 }
 .F-img {
-  width: 250px;
+  width: 240px;
   height: 150px;
+  gap: 50px;
 }
 
 .F-images {
@@ -674,20 +639,23 @@ span {
 /*----------------------------------------crousal----------------------------------*/
 .view-less {
   display: flex;
+  align-items: center;
   background-color: #000;
   justify-content: space-evenly;
-  padding: 15px 0;
+  padding-right: 5px;
+  gap: 5px;
   flex-wrap: wrap;
 }
 
 .videoDiv {
   position: relative;
+  padding: 5px;
 }
 
 .small-video-title {
   color: white;
   position: absolute;
-  top: 100px;
+  top: 90px;
   padding-left: 15px;
 }
 
@@ -696,7 +664,7 @@ span {
   gap: 5px;
   color: #cac9c9;
   position: absolute;
-  top: 115px;
+  top: 105px;
   padding-left: 15px;
   font-size: 10px;
 }
@@ -704,7 +672,7 @@ span {
 .small-video-publisher-img {
   position: absolute;
   top: 110px;
-  padding-left: 230px;
+  padding-left: 210px;
 }
 
 .small-video-publisher-img > img {
@@ -774,7 +742,7 @@ span {
 }
 
 .main-video {
-  min-height: calc(100vh - 60px);
+  min-height: calc(50vh - 60px);
   max-width: 70vw;
   padding-top: 30px;
 }
@@ -916,4 +884,132 @@ span {
 
 .saveBtn:disabled {
   cursor: not-allowed;
+}
+.msg{
+  text-align: center;
+  padding: 40px;
+  color: salmon;
+}
+.sug{
+  color: white;
+  margin: 10px;
+  text-decoration: underline;
+  padding: 0;
+}
+.pagenot{
+  background-image: url('https://clipground.com/images/img_tree-png-1.png');
+    background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: xx-large;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+  .video-title{
+    top: 20%;
+    font-size: medium;
+  }
+  .video-data{
+    top: 40%;
+  }
+  .user-links{
+    font-size:small;
+  }
+  .V-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    width: 80%;
+  }
+  .V-container2>input{
+    margin-left: 0;
+  }
+  .drag-drop{
+    padding: 0;
+    width: 90%;
+  }
+  .abc{
+    width: 80%;
+  }
+  .abc input{
+    margin-left: 0;
+  }
+  .abc textarea{
+   margin-left: 0; 
+  }
+  .V-Title{
+    width: 100%;
+  }
+  .videos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* height: 30%; */
+  }
+  .main-video{
+    width: 100%;
+  }
+  .main-video-title h2{
+    font-size: small;
+  }
+  .my-vid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .right{
+    width: 100%;
+  }
+  .my-video-data input{
+    width: 40%;
+  }
+  .my-video-information{
+    margin-left: 0;
+  }
+  .container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .div1{
+    height: 50vh;
+    width: 100vw;
+  }
+  .title{
+    margin-top: 0;
+  }
+  .title p{
+    font-size: medium;
+  }
+/* .title a{
+  margin-top: -10rem;
+} */
+.p3{
+  margin-bottom: 0;
+}
+.title a{
+margin-top: 5px;
+font-size: large;
+}
+.p1{
+  margin-top: 10%;
+}
+  .div2{
+    /* margin-top:20% ; */
+    height: 60vh;
+    width: 100vw;
+  }
+
+  
 }

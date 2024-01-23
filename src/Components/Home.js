@@ -72,7 +72,7 @@ const HomePage = () => {
       ) : (
         <div className="search-page">
           <div className="searched-video">
-            {searchedVideos.map((video) => (
+            {searchedVideos.map((video,id) => (
               <Link to="/play-video" state={{ movieData: video }}>
                 <Smallvideo video={video} />
               </Link>

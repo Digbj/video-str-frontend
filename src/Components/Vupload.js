@@ -45,7 +45,7 @@ const VideoUpload = ({ setOpenModal }) => {
     setFile(files[0]);
   };
 
-  console.log(movieData);
+  // console.log(movieData);
 
   function handleClick(formData) {
     setIsUploading(true);
@@ -75,7 +75,7 @@ const VideoUpload = ({ setOpenModal }) => {
       },
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          console.log(downloadURL);
+          // console.log(downloadURL);
           const postMovieData = async () => {
             try {
               const res = await axios.post(

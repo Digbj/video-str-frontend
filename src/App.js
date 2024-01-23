@@ -1,19 +1,17 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./Components/Home";
-// import LoadingPage1 from "./Components/Home";
-// import FetchVideo from "./Components/VideoFetch";
-// import Nav from "./Components/NavBar";
 import Signup from "./Components/signup";
 import Login from "./Components/login";
 import VideoUpload from "./Components/Vupload";
 import SearchPage from "./Components/SearchPage";
 import VideoPlay from "./Components/VideoPlay";
 import MyVid from "./Components/MyVid";
-// import { useSelector } from "react-redux";
+import PageNotfound from "./Components/pageNotfound";
+
 
 function App() {
-  // const { currentUser } = useSelector((state) => state.user);
+
   return (
     <BrowserRouter>
       <Routes>
@@ -24,6 +22,7 @@ function App() {
         <Route path="/search" element={<SearchPage />} />
         <Route path="/play-video" element={<VideoPlay />} />
         <Route path="/my-video" element={<MyVid />} />
+        <Route path="*" element={<PageNotfound/>}/>
       </Routes>
     </BrowserRouter>
   );
